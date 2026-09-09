@@ -1,2 +1,452 @@
-/* AI Education Personality Platform - Modern Arabic UI */
-:root{--primary:#4f46e5;--primary-dark:#3730a3;--secondary:#06b6d4;--accent:#f59e0b;--success:#10b981;--danger:#ef4444;--bg:#f8fafc;--card:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--shadow:0 10px 25px -5px rgb(0 0 0 / .1),0 8px 10px -6px rgb(0 0 0 / .1);--radius:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#f0f9ff 0%,#e0e7ff 50%,#fdf4ff 100%);color:var(--text);min-height:100vh;line-height:1.7;direction:rtl}header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:1.2rem 2rem;box-shadow:var(--shadow);position:sticky;top:0;z-index:100}.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}.logo{display:flex;align-items:center;gap:.8rem;font-size:1.4rem;font-weight:700}.logo span{background:rgba(255,255,255,.2);padding:.4rem .7rem;border-radius:10px}nav{display:flex;gap:.5rem;flex-wrap:wrap}.nav-btn{background:rgba(255,255,255,.15);border:none;color:#fff;padding:.6rem 1.2rem;border-radius:50px;cursor:pointer;font-size:.95rem;font-weight:500;transition:all .3s}.nav-btn:hover,.nav-btn.active{background:#fff;color:var(--primary);transform:translateY(-2px)}.container{max-width:1100px;margin:2rem auto;padding:0 1.5rem}.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem;margin-bottom:2rem;border:1px solid var(--border)}.card-title{font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}.card-title:before{content:'';width:6px;height:28px;background:linear-gradient(to bottom,var(--primary),var(--secondary));border-radius:3px}.form-group{margin-bottom:1.4rem}label{display:block;font-weight:600;margin-bottom:.5rem;color:var(--text)}input[type=text],input[type=date],input[type=file],textarea,select{width:100%;padding:.85rem 1.1rem;border:2px solid var(--border);border-radius:12px;font-size:1rem;transition:all .3s;background:#fff;font-family:inherit}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(79,70,229,.15)}textarea{min-height:140px;resize:vertical}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.8rem;border:none;border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit}.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(79,70,229,.3)}.btn-secondary{background:var(--secondary);color:#fff}.btn-success{background:var(--success);color:#fff}.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}.btn-block{width:100%}.photo-upload{border:3px dashed var(--border);border-radius:16px;padding:2rem;text-align:center;cursor:pointer;transition:all .3s;background:#f8fafc}.photo-upload:hover{border-color:var(--primary);background:#eef2ff}.photo-preview{max-width:180px;max-height:180px;border-radius:50%;object-fit:cover;margin:1rem auto;display:none;border:4px solid var(--primary);box-shadow:var(--shadow)}.profile-header{display:flex;gap:2rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem}.profile-avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:5px solid var(--primary);box-shadow:var(--shadow)}.profile-info h2{font-size:1.8rem;color:var(--primary);margin-bottom:.3rem}.badge{display:inline-block;padding:.35rem .9rem;border-radius:50px;font-size:.85rem;font-weight:600;margin:.2rem}.badge-primary{background:#e0e7ff;color:#3730a3}.badge-cyan{background:#cffafe;color:#0e7490}.badge-amber{background:#fef3c7;color:#b45309}.badge-green{background:#d1fae5;color:#047857}.style-cards,.result-grid,.stats-grid,.analysis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}.style-card,.result-item{border:2px solid var(--border);padding:1.2rem;border-radius:14px;cursor:pointer;transition:all .3s;background:#fff}.style-card:hover,.style-card.selected{border-color:var(--primary);background:#eef2ff;transform:translateY(-2px)}.style-card .icon{font-size:2rem;margin-bottom:.5rem}.section{display:none}.section.active{display:block}.hidden{display:none!important}.spinner{width:42px;height:42px;border:4px solid #e2e8f0;border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite;margin:1rem auto}@keyframes spin{to{transform:rotate(360deg)}}.result-box{background:#f8fafc;border:1px solid var(--border);border-radius:14px;padding:1.2rem;margin-top:1rem}.result-box h3{color:var(--primary);margin-bottom:.6rem}.content-adapted,.assessment-list{white-space:pre-wrap;line-height:1.9}footer{text-align:center;padding:2rem 1rem;color:var(--text-light);font-size:.9rem}.tip{background:#fffbeb;border-right:4px solid var(--accent);padding:1rem;border-radius:10px;margin-top:1rem}.error{background:#fef2f2;border-right:4px solid var(--danger);padding:1rem;border-radius:10px;color:#991b1b}@media(max-width:700px){header{padding:1rem}.container{padding:0 1rem;margin:1rem auto}.card{padding:1.25rem}.header-content{justify-content:center}.logo{width:100%;justify-content:center}nav{justify-content:center}.nav-btn{font-size:.82rem;padding:.5rem .8rem}.profile-header{justify-content:center;text-align:center}}
+/* ===== AI Education Personality Platform - Modern Arabic UI ===== */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --success: #10b981;
+  --danger: #ef4444;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #fdf4ff 100%);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.7;
+  direction: rtl;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1.2rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  background: rgba(255,255,255,0.2);
+  padding: 0.4rem 0.7rem;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* ===== Main Container ===== */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-title::before {
+  content: '';
+  width: 6px;
+  height: 28px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  border-radius: 3px;
+}
+
+/* ===== Forms ===== */
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: #fff;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-success {
+  background: var(--success);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ===== Photo Upload ===== */
+.photo-upload {
+  border: 3px dashed var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #f8fafc;
+}
+
+.photo-upload:hover {
+  border-color: var(--primary);
+  background: #eef2ff;
+}
+
+.photo-preview {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: none;
+  border: 4px solid var(--primary);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Personality Result ===== */
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.profile-info h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.2rem;
+}
+
+.badge-primary { background: #e0e7ff; color: #3730a3; }
+.badge-cyan { background: #cffafe; color: #0e7490; }
+.badge-amber { background: #fef3c7; color: #b45309; }
+.badge-green { background: #d1fae5; color: #047857; }
+.badge-pink { background: #fce7f3; color: #be185d; }
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.result-item {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 1.3rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.result-item h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.result-item p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.big-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* ===== Sections Visibility ===== */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Learning Style Cards ===== */
+.style-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.style-card {
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.style-card:hover,
+.style-card.selected {
+  border-color: var(--primary);
+  background: #eef2ff;
+  transform: translateY(-4px);
+}
+
+.style-card .icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Content Adaptation ===== */
+.adapted-content {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+  line-height: 1.9;
+}
+
+/* ===== Assessment ===== */
+.question-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.question-card h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 0.4rem;
+}
+
+.options label:hover {
+  background: #f1f5f9;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+}
+
+.empty-state .icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card {
+    padding: 1.4rem;
+  }
+}
+
+/* ===== Loading Spinner ===== */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e7ff;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none !important;
+}
