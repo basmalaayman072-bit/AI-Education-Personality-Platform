@@ -1,14 +1,197 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Education Personality Platform | منصة التعلم الذكي حسب الشخصية</title><meta name="description" content="منصة ذكاء اصطناعي تحلل شخصية المتعلم وتكيف المحتوى والتقييمات حسب أسلوب تعلمه - مشروع بحثي في AI in Education"><link rel="stylesheet" href="css/style.css"></head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Education Personality Platform | منصة التعلم الذكي حسب الشخصية</title>
+  <meta name="description" content="منصة ذكاء اصطناعي تحلل شخصية المتعلم وتكيف المحتوى والتقييمات حسب أسلوب تعلمه - مشروع بحثي في AI in Education">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header><div class="header-content"><div class="logo"><span>🧠</span><div>AI Education<div style="font-size:0.75rem;font-weight:400;opacity:0.9">Personality Platform</div></div></div><nav><button class="nav-btn active" data-section="home">الرئيسية</button><button class="nav-btn" data-section="personality">تحليل الشخصية</button><button class="nav-btn" data-section="profile">ملفي الشخصي</button><button class="nav-btn" data-section="content">تكييف المحتوى</button><button class="nav-btn" data-section="assessment">التقييم الذكي</button></nav></div></header>
-<main class="container">
-<section id="section-home" class="section active"><div class="card"><div id="home-welcome"></div></div><div class="card"><h2 class="card-title">عن المشروع</h2><p style="margin-bottom:1rem">هذه المنصة جزء من مشروع بحثي في مجال <strong>AI in Education</strong> يهدف إلى بناء نظام ذكي يحلل شخصية المتعلم باستخدام علوم متعددة (علم الأعداد، الأبراج، أبجد، أنماط التعلم)، ثم يقوم بتكييف المحتوى التعليمي والتقييمات لتناسب قدرات وأسلوب كل طالب.</p><div class="result-grid"><div class="result-item"><h4>🔬 تحليل الشخصية</h4><p>اسم + تاريخ ميلاد + صورة → ملف شخصي تعليمي عميق</p></div><div class="result-item"><h4>📚 تكييف المحتوى</h4><p>تحويل أي درس إلى الشكل الذي يناسب طريقة تعلمك</p></div><div class="result-item"><h4>📝 تقييم ذكي</h4><p>أسئلة تنمي الفهم الحقيقي وليست الحفظ فقط</p></div></div><p style="margin-top:1.5rem;font-size:0.9rem;color:var(--text-light)">إعداد: <strong>بسملة أيمن</strong> – كلية التربية – جامعة بنها<br>تخصص: تدريس العلوم باللغة الإنجليزية (المرحلة الابتدائية)</p></div></section>
-<section id="section-personality" class="section"><div class="card"><h2 class="card-title">تحليل الشخصية التعليمية</h2><p style="margin-bottom:1.5rem;color:var(--text-light)">أدخلي بياناتك وسنقوم بتحليل شخصيتك باستخدام علم الأعداد + الأبراج + أبجد + أنماط التعلم.</p><form id="personality-form"><div class="form-group"><label for="fullName">الاسم الكامل</label><input type="text" id="fullName" placeholder="مثال: بسملة أيمن محمد" required></div><div class="form-group"><label for="dob">تاريخ الميلاد</label><input type="date" id="dob" required></div><div class="form-group"><label>صورة الوجه (اختياري – للتحديث السنوي)</label><div class="photo-upload" onclick="document.getElementById('photo').click()"><input type="file" id="photo" accept="image/*" style="display:none"><div id="photo-placeholder"><div style="font-size:2.5rem;margin-bottom:0.5rem">📷</div><p>اضغطي لرفع صورة الوجه</p><p style="font-size:0.85rem;color:var(--text-light)">سيتم حفظها محلياً فقط</p></div><img id="photo-preview" class="photo-preview" alt="معاينة الصورة"></div></div><div class="form-group"><label>ما هو أسلوب تعلمك المفضل؟ (اختياري – لتحسين الدقة)</label><div class="style-cards"><div class="style-card" data-style="بصري / صوري" data-tip="تتعلمين أفضل بالصور والإنفوجرافيك والخرائط الذهنية والفيديوهات."><div class="icon">👁️</div><strong>بصري</strong><p style="font-size:0.85rem;color:var(--text-light)">صور وفيديوهات</p></div><div class="style-card" data-style="سمعي / شفهي" data-tip="تتعلمين أفضل بالشرح الصوتي والنقاش والقصص."><div class="icon">🎧</div><strong>سمعي</strong><p style="font-size:0.85rem;color:var(--text-light)">شرح ونقاش</p></div><div class="style-card" data-style="حركي / عملي" data-tip="تتعلمين أفضل بالتجربة العملية والحركة والتطبيق."><div class="icon">✋</div><strong>حركي</strong><p style="font-size:0.85rem;color:var(--text-light)">تجربة وتطبيق</p></div><div class="style-card" data-style="قرائي / كتابي" data-tip="تتعلمين أفضل بالقراءة والكتابة وتلخيص المعلومات."><div class="icon">📖</div><strong>قرائي</strong><p style="font-size:0.85rem;color:var(--text-light)">قراءة وكتابة</p></div></div></div><button type="submit" class="btn btn-primary btn-block">✨ تحليل شخصيتي الآن</button></form><div id="analysis-result" class="hidden" style="margin-top:2rem"></div></div></section>
-<section id="section-profile" class="section"><div class="card"><h2 class="card-title">ملفي الشخصي التعليمي</h2><div id="profile-content"></div></div></section>
-<section id="section-content" class="section"><div class="card"><h2 class="card-title">تكييف المحتوى حسب شخصيتك</h2><p style="margin-bottom:1.5rem;color:var(--text-light)">الصقي أي محتوى (درس، نص، ملخص، شرح) وسنقوم بتحويله للشكل الذي يناسب طريقة تعلمك.</p><form id="content-form"><div class="form-group"><label for="raw-content">المحتوى الأصلي</label><textarea id="raw-content" placeholder="الصقي هنا نص الدرس أو الشرح الذي تجدين صعوبة في فهمه..."></textarea></div><button type="submit" class="btn btn-primary btn-block">🔄 تكييف المحتوى حسب شخصيتي</button></form><div id="adapted-result" class="hidden" style="margin-top:2rem"></div></div></section>
-<section id="section-assessment" class="section"><div class="card"><h2 class="card-title">التقييم الذكي المخصص</h2><p style="margin-bottom:1.5rem;color:var(--text-light)">أدخلي موضوع الدرس وسنولد لكِ أسئلة تقييم تنمي الفهم الحقيقي وتناسب أسلوب تعلمك.</p><form id="assessment-form"><div class="form-group"><label for="assess-topic">موضوع الدرس أو المحتوى</label><input type="text" id="assess-topic" placeholder="مثال: دورة الماء في الطبيعة / Photosynthesis / الكسور"></div><button type="submit" class="btn btn-primary btn-block">📝 توليد تقييم ذكي</button></form><div id="assessment-result" class="hidden" style="margin-top:2rem"></div></div></section>
-</main>
-<footer><p><strong>AI Education Personality Platform</strong><br>مشروع بحثي في AI in Education – بسملة أيمن – كلية التربية جامعة بنها – 2026</p></footer>
-<script src="js/numerology.js"></script><script src="js/astrology.js"></script><script src="js/app.js"></script>
-</body></html>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span>🧠</span>
+        <div>
+          AI Education
+          <div style="font-size:0.75rem;font-weight:400;opacity:0.9">Personality Platform</div>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-section="home">الرئيسية</button>
+        <button class="nav-btn" data-section="personality">تحليل الشخصية</button>
+        <button class="nav-btn" data-section="profile">ملفي الشخصي</button>
+        <button class="nav-btn" data-section="content">تكييف المحتوى</button>
+        <button class="nav-btn" data-section="assessment">التقييم الذكي</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Home -->
+    <section id="section-home" class="section active">
+      <div class="card">
+        <div id="home-welcome"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">عن المشروع</h2>
+        <p style="margin-bottom:1rem">
+          هذه المنصة جزء من مشروع بحثي في مجال <strong>AI in Education</strong>
+          يهدف إلى بناء نظام ذكي يحلل شخصية المتعلم باستخدام علوم متعددة
+          (علم الأعداد، الأبراج، أبجد، أنماط التعلم)، ثم يقوم بتكييف المحتوى
+          التعليمي والتقييمات لتناسب قدرات وأسلوب كل طالب.
+        </p>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <h4>🔬 تحليل الشخصية</h4>
+            <p>اسم + تاريخ ميلاد + صورة → ملف شخصي تعليمي عميق</p>
+          </div>
+          <div class="result-item">
+            <h4>📚 تكييف المحتوى</h4>
+            <p>تحويل أي درس إلى الشكل الذي يناسب طريقة تعلمك</p>
+          </div>
+          <div class="result-item">
+            <h4>📝 تقييم ذكي</h4>
+            <p>أسئلة تنمي الفهم الحقيقي وليست الحفظ فقط</p>
+          </div>
+        </div>
+
+        <p style="margin-top:1.5rem;font-size:0.9rem;color:var(--text-light)">
+          إعداد: <strong>بسملة أيمن</strong> – كلية التربية – جامعة بنها<br>
+          تخصص: تدريس العلوم باللغة الإنجليزية (المرحلة الابتدائية)
+        </p>
+      </div>
+    </section>
+
+    <!-- Personality -->
+    <section id="section-personality" class="section">
+      <div class="card">
+        <h2 class="card-title">تحليل الشخصية التعليمية</h2>
+        <p style="margin-bottom:1.5rem;color:var(--text-light)">
+          أدخلي بياناتك وسنقوم بتحليل شخصيتك باستخدام علم الأعداد + الأبراج + أبجد + أنماط التعلم.
+        </p>
+
+        <form id="personality-form">
+          <div class="form-group">
+            <label for="fullName">الاسم الكامل</label>
+            <input type="text" id="fullName" placeholder="مثال: بسملة أيمن محمد" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">تاريخ الميلاد</label>
+            <input type="date" id="dob" required>
+          </div>
+
+          <div class="form-group">
+            <label>صورة الوجه (اختياري – للتحديث السنوي)</label>
+            <div class="photo-upload" onclick="document.getElementById('photo').click()">
+              <input type="file" id="photo" accept="image/*" style="display:none">
+              <div id="photo-placeholder">
+                <div style="font-size:2.5rem;margin-bottom:0.5rem">📷</div>
+                <p>اضغطي لرفع صورة الوجه</p>
+                <p style="font-size:0.85rem;color:var(--text-light)">سيتم حفظها محلياً فقط</p>
+              </div>
+              <img id="photo-preview" class="photo-preview" alt="معاينة الصورة">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>ما هو أسلوب تعلمك المفضل؟ (اختياري – لتحسين الدقة)</label>
+            <div class="style-cards">
+              <div class="style-card" data-style="بصري / صوري" data-tip="تتعلمين أفضل بالصور والإنفوجرافيك والخرائط الذهنية والفيديوهات.">
+                <div class="icon">👁️</div>
+                <strong>بصري</strong>
+                <p style="font-size:0.85rem;color:var(--text-light)">صور وفيديوهات</p>
+              </div>
+              <div class="style-card" data-style="سمعي / شفهي" data-tip="تتعلمين أفضل بالشرح الصوتي والنقاش والقصص.">
+                <div class="icon">🎧</div>
+                <strong>سمعي</strong>
+                <p style="font-size:0.85rem;color:var(--text-light)">شرح ونقاش</p>
+              </div>
+              <div class="style-card" data-style="حركي / عملي" data-tip="تتعلمين أفضل بالتجربة العملية والحركة والتطبيق.">
+                <div class="icon">✋</div>
+                <strong>حركي</strong>
+                <p style="font-size:0.85rem;color:var(--text-light)">تجربة وتطبيق</p>
+              </div>
+              <div class="style-card" data-style="قرائي / كتابي" data-tip="تتعلمين أفضل بالقراءة والكتابة وتلخيص المعلومات.">
+                <div class="icon">📖</div>
+                <strong>قرائي</strong>
+                <p style="font-size:0.85rem;color:var(--text-light)">قراءة وكتابة</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">✨ تحليل شخصيتي الآن</button>
+        </form>
+
+        <div id="analysis-result" class="hidden" style="margin-top:2rem"></div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="section-profile" class="section">
+      <div class="card">
+        <h2 class="card-title">ملفي الشخصي التعليمي</h2>
+        <div id="profile-content"></div>
+      </div>
+    </section>
+
+    <!-- Content adaptation -->
+    <section id="section-content" class="section">
+      <div class="card">
+        <h2 class="card-title">تكييف المحتوى حسب شخصيتك</h2>
+        <p style="margin-bottom:1.5rem;color:var(--text-light)">
+          الصقي أي محتوى (درس، نص، ملخص، شرح) وسنقوم بتحويله للشكل الذي يناسب طريقة تعلمك.
+        </p>
+
+        <form id="content-form">
+          <div class="form-group">
+            <label for="raw-content">المحتوى الأصلي</label>
+            <textarea id="raw-content" placeholder="الصقي هنا نص الدرس أو الشرح الذي تجدين صعوبة في فهمه..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">🔄 تكييف المحتوى حسب شخصيتي</button>
+        </form>
+
+        <div id="adapted-result" class="hidden" style="margin-top:2rem"></div>
+      </div>
+    </section>
+
+    <!-- Assessment -->
+    <section id="section-assessment" class="section">
+      <div class="card">
+        <h2 class="card-title">التقييم الذكي المخصص</h2>
+        <p style="margin-bottom:1.5rem;color:var(--text-light)">
+          أدخلي موضوع الدرس وسنولد لكِ أسئلة تقييم تنمي الفهم الحقيقي وتناسب أسلوب تعلمك.
+        </p>
+
+        <form id="assessment-form">
+          <div class="form-group">
+            <label for="assess-topic">موضوع الدرس أو المحتوى</label>
+            <input type="text" id="assess-topic" placeholder="مثال: دورة الماء في الطبيعة / Photosynthesis / الكسور">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">📝 توليد تقييم ذكي</button>
+        </form>
+
+        <div id="assessment-result" class="hidden" style="margin-top:2rem"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <strong>AI Education Personality Platform</strong><br>
+      مشروع بحثي في AI in Education – بسملة أيمن – كلية التربية جامعة بنها – 2026
+    </p>
+  </footer>
+
+  <script src="js/numerology.js"></script>
+  <script src="js/astrology.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
