@@ -3,9 +3,8 @@
  * AI Education Personality Platform
  * بسملة أيمن - كلية التربية - جامعة بنها
  * 
- * Note: Detailed analysis (numerology, astrology, Abjad, etc.) is performed 
- * in the background and stored internally. Results are NOT displayed to the end user.
- * They are only used to adapt content and assessments.
+ * Internal analytical modules remain unchanged and are used in the background.
+ * Their implementation details are not displayed in the user-facing interface.
  */
 
 const App = {
@@ -123,7 +122,7 @@ const App = {
     }
 
     const resultDiv = document.getElementById('analysis-result');
-    resultDiv.innerHTML = '<div class="spinner"></div><p style="text-align:center">جاري تحليل شخصيتك...</p>';
+    resultDiv.innerHTML = '<div class="spinner"></div><p style="text-align:center">جاري تحليل ملفك التعليمي...</p>';
     resultDiv.classList.remove('hidden');
 
     setTimeout(() => {
@@ -168,14 +167,14 @@ const App = {
         <div class="result-box">
           <h3>تم إنشاء ملفك التعليمي ✨</h3>
           <div class="stats-grid">
-            <div><strong>مسار الحياة</strong><p>${lifePath} — ${lifePathInfo.title}</p></div>
-            <div><strong>رقم المصير</strong><p>${destiny} — ${destinyInfo.title}</p></div>
-            <div><strong>أبجد</strong><p>${abjad}</p></div>
-            <div><strong>البرج</strong><p>${zodiac.name} (${zodiac.element})</p></div>
+            <div><strong>الملف الشخصي</strong><p>تم بناء المؤشرات الشخصية</p></div>
+            <div><strong>السمات العامة</strong><p>تم تحديد مجموعة من السمات التحليلية</p></div>
+            <div><strong>التفضيلات التعليمية</strong><p>${learningStyle}</p></div>
+            <div><strong>التوصية التعليمية</strong><p>تم إعداد توصيات مبدئية للتعلم</p></div>
           </div>
-          <p style="margin-top:1rem"><strong>نمط التعلم المقترح:</strong> ${learningStyle}</p>
+          <p style="margin-top:1rem"><strong>تفضيل التعلم المقترح:</strong> ${learningStyle}</p>
           <div class="tip">${learningTip}</div>
-          <p style="margin-top:1rem;font-size:.9rem;color:var(--text-light)">هذه النتائج تجريبية وليست تشخيصًا نفسيًا أو مقياسًا تربويًا مُتحققًا من صلاحيته.</p>
+          <p style="margin-top:1rem;font-size:.9rem;color:var(--text-light)">هذه النتائج تجريبية ومخصصة لأغراض النموذج الأولي والبحث، وليست تشخيصًا نفسيًا أو مقياسًا تربويًا مُتحققًا من صلاحيته.</p>
         </div>`;
 
       this.showSection('profile');
@@ -208,30 +207,30 @@ const App = {
           : '<div class="profile-avatar" style="display:flex;align-items:center;justify-content:center;background:#eef2ff;font-size:3rem">🧠</div>'}
         <div class="profile-info">
           <h2>${p.fullName}</h2>
-          <span class="badge badge-primary">${p.zodiac}</span>
-          <span class="badge badge-cyan">${p.element}</span>
-          <span class="badge badge-amber">نمط: ${p.learningStyle}</span>
+          <span class="badge badge-primary">ملف شخصي</span>
+          <span class="badge badge-cyan">تحليل متعدد الأبعاد</span>
+          <span class="badge badge-amber">تفضيل: ${p.learningStyle}</span>
         </div>
       </div>
 
       <div class="analysis-grid">
         <div class="result-box">
-          <h3>مسار الحياة ${p.lifePath}</h3>
+          <h3>السمات العامة</h3>
           <p><strong>${p.lifePathInfo.title}</strong></p>
           <p>${p.lifePathInfo.desc}</p>
         </div>
         <div class="result-box">
-          <h3>رقم المصير ${p.destiny}</h3>
+          <h3>المؤشرات الشخصية</h3>
           <p><strong>${p.destinyInfo.title}</strong></p>
           <p>${p.destinyInfo.desc}</p>
         </div>
         <div class="result-box">
-          <h3>أبجد</h3>
-          <p>${p.abjad}</p>
+          <h3>الملخص التحليلي</h3>
+          <p>تم إنشاء مجموعة من المؤشرات لدعم تخصيص التجربة التعليمية.</p>
         </div>
         <div class="result-box">
-          <h3>البرج</h3>
-          <p>${p.zodiac} — ${p.zodiacEn}</p>
+          <h3>التوصية التعليمية</h3>
+          <p>${p.learningTip}</p>
           <p>${p.traits}</p>
         </div>
       </div>
@@ -257,7 +256,7 @@ const App = {
 
     box.innerHTML = `
       <div class="result-box">
-        <h3>صيغة مقترحة حسب نمطك: ${this.profile.learningStyle}</h3>
+        <h3>صيغة مقترحة حسب تفضيلاتك: ${this.profile.learningStyle}</h3>
         <div class="content-adapted">${this.adaptTemplate(content)}</div>
         <div class="tip">${this.profile.learningTip}</div>
       </div>`;
